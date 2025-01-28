@@ -14,7 +14,7 @@ class Solution(object):
             
 
             for ix in range(len(my_list)):
-                if not my_list[ix] in combo:
+                if not my_list[ix] in combo: #CANT HAVE SAME NUMBER
                     combo.append(my_list[ix])
                     backtrack(ix,combo)
                     combo.pop() 
