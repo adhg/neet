@@ -5,9 +5,9 @@ class Solution(object):
         
         res = [] 
         combo = []
-        count = {n:0 for n in nums}
-        for n in nums:
-            count[n] +=1
+        count = {n:0 for n in nums} #you have a counter with KEYS
+        for n in nums: 
+            count[n] +=1   #you know how manhy KEYS exists (some keys may be duplicated)
 
         def backtrack(): 
             
@@ -15,15 +15,14 @@ class Solution(object):
                 res.append(combo[:])
                 return
 
-            for n in count:
-                if count[n]>0:
-                    combo.append(n)
-                    count[n]-=1
-                    backtrack()
-                    count[n]+=1
-                    combo.pop()
+            for n in count:      #iterate the dict with KEYS
+                if count[n]>0:  #can I use it? 
+                    combo.append(n)  
+                    count[n]-=1   #remove from dict so dont reuse if 0
+                    backtrack() 
+                    count[n]+=1     #add it back
+                    combo.pop()   #pop it
              
-
         backtrack()
         return res
         
