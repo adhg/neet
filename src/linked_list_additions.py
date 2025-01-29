@@ -24,7 +24,7 @@ class Solution(object):
             
             ptr.next = ListNode(total)             
             
-            ptr = ptr.next
+            ptr = ptr.next #note we move the ptr one ahead!
             l1 = l1.next if l1 else None
             l2 = l2.next if l2 else None
                                                                  
