@@ -1,12 +1,8 @@
-from collections import Counter
 
 class Solution:
     
     def minFlips(self, s):
-        
-        count = Counter(s)
-        print (count)
-        
+         
         n = len(s)
         s= s+s
         alt1, alt2 = '',''
