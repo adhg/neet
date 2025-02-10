@@ -5,6 +5,9 @@ class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+        
+    def __repr__(self):
+        return f"ListNode({self.val}) -> {repr(self.next)}"
  
 class Solution(object):
     def deleteDuplicates(self, head):                

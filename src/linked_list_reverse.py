@@ -6,6 +6,9 @@ class ListNode(object):
         self.val = val
         self.next = next
  
+    def __repr__(self):
+        return f"value:={self.val}"
+    
 class Solution(object):
     def reverse(self, head):                
          
