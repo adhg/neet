@@ -4,13 +4,14 @@ from collections import defaultdict
 class Solution:
     
     def shortestPath(self, n, edges, src):
-                 
         adj = defaultdict(list)
-        for s, dest, distance in edges:
-            adj[s].append( [dest, distance] ) #KEY src, Value--> [ [dest, distance]...[] ]
-            
+        for from_, to, weight in edges:
+             adj[from_].append( [to, weight] )
+             #adj[to].append( [from_, weight] )
+        
+        print (adj)
+        minHeap = [ [0, src] ]
         shortest = {}
-        minHeap = [ [0,src] ] # DISTANCE, SOURCE
         
         while minHeap:
             
@@ -18,20 +19,14 @@ class Solution:
             
             if n1 in shortest:
                 continue
+            
             shortest[n1]=w1
             
             for n2, w2 in adj[n1]:
-                if n2 not in shortest:
-                    minHeap.append( [w1+w2, n2] )
-            heapq.heapify(minHeap)
-                
-        #if no connection from/to use -1
-        for i in range(n):
-            if i not in shortest:
-                shortest[i]=-1
-    
-        return shortest
+                if n2 not in shortest: #why? becuase if we visited n2 already - move on!                     
+                    heapq.heappush(minHeap, [w1+w2, n2] )            
         
+        return shortest
 
 if __name__=='__main__':
     print ("start...")
