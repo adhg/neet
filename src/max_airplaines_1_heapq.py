@@ -17,8 +17,8 @@ class Solution:
             # Step 2: Remove all planes that have already landed
             while q:
                 earliest_landing = q[0]  # Check the earliest landing time
-                if earliest_landing>start:
-                    break  # DO NOT REMOVE AND EXIT! this airplane is in AIR 
+                if earliest_landing>start:  #earliest_landing is from the q so DO NOT REMOVE AND EXIT! this airplane (in the q) is still in AIR 
+                    break 
                 heapq.heappop(q)  # Remove the landed plane (becuase it )
             
             # Step 3: Add the new flight's landing time (fixed placement)

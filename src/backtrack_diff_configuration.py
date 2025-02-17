@@ -1,4 +1,11 @@
- 
+'''
+    nums=[1,1,2]
+    
+    res:
+    [1, 1, 2]
+    [1, 2, 1]
+    [2, 1, 1]
+''' 
 
 class Solution(object):
     def solve(self, nums):

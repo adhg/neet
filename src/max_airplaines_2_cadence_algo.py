@@ -26,7 +26,7 @@ class Solution:
 if __name__ == '__main__':
     print("Start...")
     
-    airplanes = [[4, 8], [2, 5], [17, 20], [10, 21], [9, 18], [11, 12], [11, 13], ,[10,13]]
+    airplanes = [[4, 8], [2, 5], [17, 20], [10, 21], [9, 18], [11, 12], [11, 13], [10,13]]
     s = Solution()
     p = s.max_airplanes(airplanes)
     
