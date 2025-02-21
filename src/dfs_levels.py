@@ -1,4 +1,7 @@
 from collections import defaultdict
+'''
+result would be: defaultdict(<class 'list'>, {0: [3], 1: [9, 20], 2: [15, 7]})
+'''
 
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
