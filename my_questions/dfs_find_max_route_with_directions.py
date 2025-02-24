@@ -30,7 +30,7 @@ class Solution(object):
             if val_left>val_right:
                 return (val_left+n.val, path_left) #important, return the curr_route
             else:
-               return (val_right+n.val, path_right) #important, return the curr_route
+               return (val_right+n.val, path_right)
             
             
         
