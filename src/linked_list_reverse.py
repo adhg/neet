@@ -21,7 +21,7 @@ class Solution(object):
             cur = nxt
 
         return prev
-        
+              
     
 if __name__=='__main__':
     print ("start...")
@@ -36,10 +36,18 @@ if __name__=='__main__':
     n12.next=n3
     n3.next=n17
     n17.next=n25
-        
+
+    
+    print ("before...")    
+    p = n8
+    while p:
+        print (p.val,end='-->')
+        p=p.next
+
+                        
     s = Solution()
     p = s.reverse(n8)
-    
+    print ("\nafter...")    
     while p:
         print (p.val,end='-->')
         p=p.next
